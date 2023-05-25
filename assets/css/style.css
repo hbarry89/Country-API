@@ -1,0 +1,9 @@
+body {
+    background-color: aliceblue;
+    color:#626262;
+}
+
+body.dark-mode {
+    background-color: #626262;
+    color: aliceblue;
+  }
