@@ -8,9 +8,34 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <button id="toggle-button">🌓</button>
-    <h1>Test</h1>
+    <header>
+        <button id="toggle-button">🌓</button>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Docs</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Countries API</h1>
+
+    Fetch request code (copy and paste the following code and modify it based on your project's needs):
+    <hr>
+    <pre>
+        async function getCountries() {
+            const response = await fetch("https://raw.githubusercontent.com/hbarry89/Countries-API/main/countries.json");
+            const countriesData = await response.json();
+            console.log(countriesData);
+      	}
+      
+        getCountries();
+    </pre>
+    <hr>
+
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/fetch.js"></script>
     <script src="./assets/js/toggle.js"></script>
 </body>
 </html>
