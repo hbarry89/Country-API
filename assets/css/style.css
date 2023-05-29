@@ -1,9 +1,31 @@
+:root {
+    --dark: #4d545b;
+    --light: #e3e3e2;
+
+    --brown: #eee2d3;
+    --beige: #534f49;
+    --blue: #c6ae98;
+}
+
 body {
-    background-color: aliceblue;
-    color:#626262;
+    background-color: var(--light);
+    color: var(--dark);
 }
 
 body.dark-mode {
-    background-color: #626262;
-    color: aliceblue;
-  }
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+h1 {
+    font-family: 'PT Serif', serif;
+    font-weight: bolder;
+}
+
+p {
+    font-family: 'PT Serif', serif;
+}
+
+pre {
+    font-family: 'Source Code Pro', monospace;
+}
