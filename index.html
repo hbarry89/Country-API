@@ -8,56 +8,76 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <header>
-        <button id="toggle-button">🌓</button>
-        <nav>
-            <ul>
-                <li>About</li>
-                <li>Docs</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#docs">Docs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                </ul>
+                <div class="toggle" id="toggle-button">🌓</div>
+            </div>
+          </nav>
     </header>
 
     <main>
+        <section id="about">
+            <p style="color: red;">THIS PROJECT IS STILL IN PROGRESS</p>
+            <h1>Countries API</h1>
+            <img src="https://images.unsplash.com/photo-1600907055749-d6cc7e75efd4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" width="400" height ="250">
+            <p>The Countries API is a powerful and comprehensive tool that provides developers with easy access to a vast collection of information about countries around the world. This API offers a wide range of data, including country names, population, languages spoken, currency details, geographical location, time zones, and much more. With a simple and intuitive interface, developers can effortlessly integrate this API into their applications, enabling users to retrieve accurate and up-to-date information about any country. Whether you're building a travel app, educational platform, or international business tool, the Countries API empowers developers to create innovative solutions with rich country-related data.</p>
+        </section>
 
-    <h1>Countries API</h1>
+        <hr>
 
-    <img src="https://images.unsplash.com/photo-1600907055749-d6cc7e75efd4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" width="400" height ="250">
+        <section id="docs">
+            <h2>Docs</h2>
+            <p>Fetch request code (copy and paste the following code and modify it based on your project's needs):</p>
+            <div class="code-wrapper">
+
+                <pre class="code">
+    async function getCountry() {
+        const response = await fetch("https://raw.githubusercontent.com/hbarry89/Countries-API/main/countries.json");
+        const countryData = await response.json();
+        console.log(countryData);
+    }
     
-    <section id="about">
-    <p>The Countries API is a powerful and comprehensive tool that provides developers with easy access to a vast collection of information about countries around the world. This API offers a wide range of data, including country names, population, languages spoken, currency details, geographical location, time zones, and much more. With a simple and intuitive interface, developers can effortlessly integrate this API into their applications, enabling users to retrieve accurate and up-to-date information about any country. Whether you're building a travel app, educational platform, or international business tool, the Countries API empowers developers to create innovative solutions with rich country-related data.</p>
-    </section>
+    getCountry();</pre>
+    
+            </div>
+            <p>View sample response:</p>
+            <button class="btn btn-dark" id="country-button">Country Info</button>
+            <div id="country-info"></div>
+        </section>
 
-    Fetch request code (copy and paste the following code and modify it based on your project's needs):
-    <hr>
+        <hr>
 
-    <section id="docs">
-    <div class="code-wrapper">
-    <pre class="code">
-        async function getCountries() {
-            const response = await fetch("https://raw.githubusercontent.com/hbarry89/Countries-API/main/countries.json");
-            const countriesData = await response.json();
-            console.log(countriesData);
-      	}
-      
-        getCountries();
-    </pre>
-    </div>
-    <hr>
-    </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Developer's <a href="https://github.com/hbarry89" rel="noreferrer" target="_blank">GitHub</a></p>
+        </section>
 
-    <section id="contact"></section>
+        <hr>
 
     </main>
 
-    <footer>Created By Huda Barry</footer>
+    <footer>
+        <p>Created by <a href="https://hbarry89.github.io/" rel="noreferrer" target="_blank">Huda Barry</a></p>
+    </footer>
 
     <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/fetch.js"></script>
     <script src="./assets/js/toggle.js"></script>
 </body>
 </html>
