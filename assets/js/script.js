@@ -15,7 +15,8 @@ function getCountry() {
 
       let country = `<span class="country-property">#:</span> ${info.id} <br>
       <span class="country-property">Country:</span> ${info.country} <br>
-      <img src="${info.flag}" width="200" height="200" alt="Afghanistan Flag">
+      <img src="${info.flag}" width="300" height="200" alt="${info.country} Flag"> <br>
+      <img src="${info.map}" width="300" height="200" alt="${info.country} Map"> <br>
       <span class="country-property">Capital:</span> ${info.capital} <br>
       <span class="country-property">Language(s):</span> ${info.languages} <br>
       <span class="country-property">Currency:</span> ${info.currency} <br>
