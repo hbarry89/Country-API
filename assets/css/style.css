@@ -40,12 +40,35 @@ h2 {
     font-weight: bolder;
 }
 
-p,
-img {
+p {
     margin: 20px;
 }
 
+img {
+    margin: 20px;
+    border-radius: 20px;
+    border: dotted gray 1px;
+}
+
 pre {
+    padding: 5px;
+    background-color: darkgray;
+    color: black;
+    text-align: left;
+    font-family: 'Source Code Pro', monospace;
+    border: solid gray 1px;
+    border-radius: 5px;
+}
+
+.country-property {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    font-weight: bolder!important;
+    color: black;
+}
+
+#country-info {
+    margin: 50px 300px;
     padding: 5px;
     background-color: darkgray;
     color: black;
