@@ -48,39 +48,83 @@
 
         <section id="docs">
             <h2>Docs</h2>
-            <p>Fetch request code (copy and paste the following code and modify it based on your project's needs):</p>
-            <div class="code-wrapper">
+            <article class="docs-wrapper">
+                <h3>Introduction</h3>
+                <p>The Country API is a simple RESTful API that allows you to fetch country data using the GET method. This API provides information about various countries. This documentation will guide you on how to use the API and fetch country data using the provided code snippet.</p>
 
-                <pre class="code">
-    async function getCountry() {
-        const response = await fetch("https://raw.githubusercontent.com/hbarry89/Countries-API/main/country.json");
-        const countryData = await response.json();
-        console.log(countryData);
+                <h3>Base URL</h3>
+                <p>The base URL for making API requests is:</p>
+                <pre>https://raw.githubusercontent.com/hbarry89/Countries-API/main/country.json</pre>
+
+                <h3>Fetch Request Code:</h3>
+                <p>To fetch country data, you can use the following code snippet. Copy and paste it into your project and modify it based on your specific needs:</p>
+                <pre>
+async function getCountry() {
+    const response = await fetch("https://raw.githubusercontent.com/hbarry89/Countries-API/main/country.json");
+    const countryData = await response.json();
+    console.log(countryData);
     }
-    
-    getCountry();</pre>
 
-        <hr>
-    
-            </div>
-            <p>View sample response:</p>
-            <button class="btn btn-dark" id="country-button">Country Info</button>
-            <div id="country-info">Explore country information by clicking on the 'Country Info' button above. Feel free to click it multiple times to discover details about various countries.</div>
+getCountry();   </pre>
+                <p>This code snippet defines an asynchronous function <span class="inline-code">getCountry()</span> that makes a GET request to the API's endpoint to fetch country data. The response is then converted to JSON format, and the resulting data is logged to the console. You can modify this code to suit your project requirements, such as integrating the fetched data into your application.</p>
+
+                <h3>Endpoint</h3>
+                <p>The API provides a single endpoint for fetching country data:</p>
+                <pre>GET /country.json</pre>
+                <p>This endpoint returns a JSON array containing information about multiple countries. Each object in the array represents a country and includes various properties.</p>
+
+                <h3>Response Format</h3>
+                <p>The API response is in JSON format and consists of an array of country objects. Each country object has the following properties:</p>
+                <ul>
+                    <li><span class="inline-code">id:</span> The unique identifier for the country.</li>
+                    <li><span class="inline-code">country:</span> The name of the country.</li>
+                    <li><span class="inline-code">flag:</span> The URL of the flag image for the country.</li>
+                    <li><span class="inline-code">map:</span> The URL of the map image for the country.</li>
+                    <li><span class="inline-code">capital:</span> The capital city of the country.</li>
+                    <li><span class="inline-code">languages:</span> An array of language(s) spoken in the country.</li>
+                    <li><span class="inline-code">currency:</span> The currency used in the country.</li>
+                    <li><span class="inline-code">callingCode:</span> The international calling code for the country.</li>
+                    <li><span class="inline-code">internetTLD:</span> The top-level domain (TLD) for internet addresses associated with the country.</li>
+                </ul>
+
+                <h3>Example Response</h3>
+                <p>Here is an example response from the API:</p>
+                <pre>
+[
+    {
+        "id": 184,
+        "country": "United States",
+        "flag": "https://example.com/us-flag.png",
+        "map": "https://example.com/us-map.png",
+        "capital": "Washington, D.C.",
+        "languages": ["English"],
+        "currency": "United States Dollar (USD)",
+        "callingCode": "+1",
+        "internetTLD": ".us"
+    }
+]               </pre>
+                <p>This example shows data for the United States, including its properties.</p>
+
+                <h4>View sample response in-action:</h4>
+                <article class="sample-response">
+                    <button class="btn btn-dark" id="country-button">Country Info</button>
+                    <div id="country-info">Explore country information by clicking on the 'Country Info' button above. Feel free to click it multiple times to discover details about various countries.</div>
+                </article>
+
+                <h3>Conclusion</h3>
+                <p>The Country API allows you to fetch country data by making a GET request to the <span class="inline-code">/country.json</span> endpoint. The response contains an array of country objects, each providing various details about a particular country. You can integrate this API into your application to access up-to-date country information for your project's needs.</p>
+            </article>
         </section>
-
-        <hr>
 
         <section id="contact">
             <h2>Contact</h2>
             <p>Developer's <a href="https://github.com/hbarry89" rel="noreferrer" target="_blank">GitHub</a></p>
         </section>
-
-        <hr>
-
+        <br>
     </main>
 
     <footer>
-        <p>Created by <a href="https://hbarry89.github.io/" rel="noreferrer" target="_blank">Huda Barry</a></p>
+        <div>Created by <a href="https://hbarry89.github.io/" rel="noreferrer" target="_blank">Huda Barry</a></div>
     </footer>
 
     <script src="./assets/js/script.js"></script>
