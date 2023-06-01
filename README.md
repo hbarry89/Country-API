@@ -6,7 +6,7 @@
 
 ## :computer: Usage
 
-[live link](https://hbarry89.github.io/Country-API/)
+[live link](https://hbarry89.github.io/Countries-API/)
 
 ### Preview
 
