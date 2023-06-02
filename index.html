@@ -67,14 +67,14 @@
 
                 <h3>Base URL</h3>
                 <p>The base URL for making API requests is:</p>
-                <pre>https://raw.githubusercontent.com/hbarry89/Countries-API/main/country.json</pre>
+                <pre>https://raw.githubusercontent.com/hbarry89/Countries-API/main/v1/country.json</pre>
 
                 <h3>Fetch Request Code</h3>
                 <p>To fetch country data, you can use the following code snippet. Copy and paste it into your project and modify it based on your specific needs:</p>
                 <pre>
 async function getCountry() {
     try {
-        const response = await fetch("https://raw.githubusercontent.com/hbarry89/Countries-API/main/country.json");
+        const response = await fetch("https://raw.githubusercontent.com/hbarry89/Countries-API/main/v1/country.json");
 
         if (!response.ok) {
             throw new Error("Unable to fetch country data.");

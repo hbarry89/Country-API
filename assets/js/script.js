@@ -6,7 +6,7 @@ let currentInfoIndex = 0;
 async function getCountry() {
     try {
         let countryInfo = document.getElementById("country-info");
-        let url = 'https://raw.githubusercontent.com/hbarry89/Countries-API/main/country.json';
+        let url = 'https://raw.githubusercontent.com/hbarry89/Countries-API/main/v1/country.json';
         const response = await fetch(url);
 
         if (!response.ok) {
